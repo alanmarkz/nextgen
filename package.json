@@ -1,9 +1,10 @@
 {
-  "name": "nextgen",
-  "displayName": "nextgen",
+  "name": "nextgenconvert",
+  "displayName": "NextGen",
+  "icon": "./logo.png",
   "description": "Convert images and videos to next gen formats supported by modern browsers ",
   "publisher": "alanmarkz",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -37,7 +38,7 @@
       },
       {
         "command": "fileConverter.convertW",
-        "title": "Convert to WebP/WebM"
+        "title": "Convert assets to WebP/WebM"
       }
     ],
     "menus": {
