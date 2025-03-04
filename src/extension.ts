@@ -161,11 +161,20 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  let convertFolders = vscode.commands.registerCommand(
-    "fileConverter.convertFolders",
+  let convertToW = vscode.commands.registerCommand(
+    "fileConverter.convertW",
     (fileUri: vscode.Uri) => {
       if (fileUri) {
-        convertFolder(fileUri);
+        convertFolder(fileUri, "webp", "webm");
+      }
+    }
+  );
+
+  let convertToA = vscode.commands.registerCommand(
+    "fileConverter.convertA",
+    (fileUri: vscode.Uri) => {
+      if (fileUri) {
+        convertFolder(fileUri, "avif", "avi");
       }
     }
   );
@@ -175,13 +184,18 @@ export function activate(context: vscode.ExtensionContext) {
     convertToAvif,
     convertToWebM,
     convertToAvi,
-    convertFolders
+    convertToA,
+    convertToW
   );
 }
 
 export function deactivate() {}
 
-function convertFolder(folderUri: vscode.Uri) {
+function convertFolder(
+  folderUri: vscode.Uri,
+  imageFormat: string,
+  videoFormat: string
+) {
   const folderPath = folderUri.fsPath;
 
   fs.readdir(folderPath, (err, files) => {
@@ -198,9 +212,9 @@ function convertFolder(folderUri: vscode.Uri) {
       const ext = path.extname(file).toLowerCase();
 
       if (supportedImages.includes(ext)) {
-        convertFile(vscode.Uri.file(filePath), "webp"); // Convert images to WebP
+        convertFile(vscode.Uri.file(filePath), imageFormat); // Convert images to WebP
       } else if (supportedVideos.includes(ext)) {
-        convertFile(vscode.Uri.file(filePath), "webm"); // Convert videos to WebM
+        convertFile(vscode.Uri.file(filePath), videoFormat); // Convert videos to WebM
       }
     });
 

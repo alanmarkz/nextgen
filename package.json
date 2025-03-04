@@ -32,14 +32,23 @@
         "title": "Convert to AVI"
       },
       {
-        "command": "fileConverter.convertFolders",
-        "title": "Convert to nextgen"
+        "command": "fileConverter.convertA",
+        "title": "Convert assets to AVIF/AVI"
+      },
+      {
+        "command": "fileConverter.convertW",
+        "title": "Convert to WebP/WebM"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "fileConverter.convertFolders",
+          "command": "fileConverter.convertW",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation"
+        },
+        {
+          "command": "fileConverter.convertA",
           "when": "explorerResourceIsFolder",
           "group": "navigation"
         },
