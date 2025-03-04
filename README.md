@@ -6,8 +6,7 @@ This is a package that converts images and videos to next-gen formats for optimi
 
 You can install the extension via the [VS Code Extensions Marketplace](https://marketplace.visualstudio.com/items?itemName=alanmarkz.nextgen).
 
-
-
+![Demo](https://raw.githubusercontent.com/alanmarkz/nextgen/refs/heads/main/nextgen.gif)
 
 ## Usage
 
