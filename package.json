@@ -4,7 +4,7 @@
   "icon": "./logo.png",
   "description": "Convert images and videos to next gen formats supported by modern browsers ",
   "publisher": "alanmarkz",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.97.0"
   },
