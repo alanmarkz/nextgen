@@ -4,9 +4,11 @@
   "icon": "./logo.png",
   "description": "Convert images and videos to next gen formats supported by modern browsers ",
   "publisher": "alanmarkz",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
-    "vscode": "^1.97.0"
+    "vscode": "^1.93.1",
+    "windsurf": "^1.93.1",
+    "cursor": "^1.93.1"
   },
   "categories": [
     "Other"
@@ -91,7 +93,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
-    "@types/vscode": "^1.97.0",
+    "@types/vscode": "^1.93.1",
     "@typescript-eslint/eslint-plugin": "^8.25.0",
     "@typescript-eslint/parser": "^8.25.0",
     "@vscode/test-cli": "^0.0.10",
